@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Instagram Downloder",
+  "description": "This extension will provide a download button on a Instagram Post",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "index.html"
+  },
+  "permissions": [
+   "activeTab"
+   ],
+   "content_scripts": [
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "js": [
+        "main.js"
+      ]
+    }
+  ]
+}
